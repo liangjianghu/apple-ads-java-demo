@@ -20,7 +20,7 @@ public class PemUtils {
 
     private static byte[] parsePEMFile(File pemFile) throws IOException {
         if (!pemFile.isFile() || !pemFile.exists()) {
-            throw new FileNotFoundException(String.format("The file '%s' doesn't exist.", pemFile.getAbsolutePath()));
+            throw new FileNotFoundException(String.format("The file '%s' doesn't exist.ljh", pemFile.getAbsolutePath()));
         }
         PemReader reader = new PemReader(new FileReader(pemFile));
         PemObject pemObject = reader.readPemObject();
@@ -36,7 +36,7 @@ public class PemUtils {
             EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
             publicKey = kf.generatePublic(keySpec);
         } catch (NoSuchAlgorithmException e) {
-            System.out.println("Could not reconstruct the public key, the given algorithm could not be found.");
+            System.out.println("Could not reconstruct the public key, the given algorithm could not be found.ljh");
         } catch (InvalidKeySpecException e) {
             System.out.println("Could not reconstruct the public key");
         }
@@ -51,9 +51,9 @@ public class PemUtils {
             EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
             privateKey = kf.generatePrivate(keySpec);
         } catch (NoSuchAlgorithmException e) {
-            System.out.println("Could not reconstruct the private key, the given algorithm could not be found.");
+            System.out.println("Could not reconstruct the private key, the given algorithm could not be found.ljh");
         } catch (InvalidKeySpecException e) {
-            System.out.println("Could not reconstruct the private key");
+            System.out.println("Could not reconstruct the private key.ljh");
         }
 
         return privateKey;

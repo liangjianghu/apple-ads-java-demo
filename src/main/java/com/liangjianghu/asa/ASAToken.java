@@ -23,9 +23,9 @@ import com.alibaba.fastjson.JSONObject;
  */
 public class ASAToken {
 
-    private static String client_id = "SEARCHADS.27478e71-3bb0-4588-998c-182e2b405577";
-    private static String team_id = "SEARCHADS.27478e71-3bb0-4588-998c-182e2b405577";
-    private static String key_id = "bacaebda-e219-41ee-a907-e2c25b24d1b2";
+    private static String client_id = "SEARCHADS.27478e71-3bb0-1106-998c-ljh182405577";
+    private static String team_id = "SEARCHADS.27478e71-3bb0-1106-998c-ljh182405577";
+    private static String key_id = "bacaebda-e219-1106-a907-ljh182405577";
     private static String aud = "https://appleid.apple.com";
     private static String alg = "ES256";
 
@@ -35,11 +35,11 @@ public class ASAToken {
     public static void main(String[] args) {
         try {
             String clientSecret = createClientSecret(PRIVATE_KEY_FILE_256);
-            System.out.println("clientSecret 建议保存，有效期最长 180 天");
+            System.out.println("clientSecret 建议保存，有效期可设置最长 180 天");
             System.out.println(clientSecret);
 
             String url            = "https://appleid.apple.com/auth/oauth2/token";
-            String urlParameters  = "grant_type=client_credentials&scope=searchadsorg&client_id=" + client_id + "&client_secret=" + clientSecret;
+            String urlParameters  = "grant_type=client_credentials&scope=searchadsorg&agency=ljh&client_id=" + client_id + "&client_secret=" + clientSecret;
             byte[] postData       = urlParameters.getBytes( StandardCharsets.UTF_8 );
             int    postDataLength = postData.length;
 
