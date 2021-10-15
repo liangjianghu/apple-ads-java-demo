@@ -1,6 +1,6 @@
 # apple-ads-java-demo
 
-Apple Ads 广告管理 API 的 PHP 代码示例，包括 OAuth 实施参考。Apple Ads Campaign Management API, OAuth, Report API examples.
+Apple Ads 广告管理 API 的 Java 代码示例，包括 OAuth 实施参考。Apple Ads Campaign Management API, OAuth, Report API examples.
 
 ## 重点注意
 
