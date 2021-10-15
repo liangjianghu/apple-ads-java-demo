@@ -8,8 +8,6 @@ Apple Ads 广告管理 API 的 PHP 代码示例，包括 OAuth 实施参考。Ap
 
 ```bash
 
-openssl ecparam -genkey -name prime256v1 -noout -out private-key.pem
-
 openssl pkcs8 -topk8 -inform pem -in private-key.pem -outform pem -nocrypt -out private-key-new.pem
 
 ```

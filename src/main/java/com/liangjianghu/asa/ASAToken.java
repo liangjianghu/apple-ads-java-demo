@@ -30,9 +30,12 @@ public class ASAToken {
     private static String alg = "ES256";
 
     // openssl pkcs8 -topk8 -inform pem -in private-key.pem -outform pem -nocrypt -out private-key-new.pem
-    private static final String PRIVATE_KEY_FILE_256 = "/Users/wd/Downloads/ASA/private-key-new.pem";
+    private static final String PRIVATE_KEY_FILE_256 = "/Users/ljh/Downloads/private-key-new.pem";
 
     public static void main(String[] args) {
+        System.out.println("client_id:" + client_id);
+        System.out.println("  team_id:" + team_id);
+        System.out.println("   key_id:" + key_id);
         try {
             String clientSecret = createClientSecret(PRIVATE_KEY_FILE_256);
             System.out.println("clientSecret 建议保存，有效期可设置最长 180 天");
