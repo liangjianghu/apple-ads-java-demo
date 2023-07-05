@@ -75,7 +75,7 @@ public class ASAToken {
      * @return client secret
      */
     public static String createClientSecret(String privateKeyPath) throws Exception {
-        Algorithm algorithm = Algorithm.ECDSA256((ECKey) PemUtils.readPrivateKeyFromFile(PRIVATE_KEY_FILE_256, "EC"));
+        Algorithm algorithm = Algorithm.ECDSA256((ECKey) PemUtils.readPrivateKeyFromFile(privateKeyPath, "EC"));
         return JWT.create()
                 .withIssuer(team_id)
                 .withAudience(aud)
